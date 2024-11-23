@@ -58,7 +58,7 @@ public class BioskopWithScanner01 {
                         if (penonton [i] [j] != null) {
                             System.out.print(penonton[i] [j] + "   ");
                         }else {
-                            System.out.print(" - ");
+                            System.out.print(" *** ");
                         }
                        
                     }
