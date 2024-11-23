@@ -21,8 +21,24 @@ public class BioskopWithScanner01 {
                 nama = sc.nextLine();
                 System.out.print("Masukan baris: ");
                 baris = sc.nextInt();
-                System.out.print("MAsukan kolom: ");
-                kolom = sc.nextInt();
+                while (true) {
+                    
+                    if (baris >= 1 && baris <= 4) {
+                      break;  
+                    }else {
+                        System.out.println("Angka tidak valid");
+                    }
+                }
+                while (true) {
+                    
+                    System.out.print("Masukan kolom: ");
+                    kolom = sc.nextInt();
+                    if (kolom >= 1 && kolom <=2) {
+                        break;
+                    }else{ 
+                        System.out.println("Angka Tidak valid");
+                    }
+                }
                 sc.nextLine();
                 
                 if (baris >= 1 && baris <= 4 && kolom >= 1 && kolom <=4) {
@@ -46,7 +62,7 @@ public class BioskopWithScanner01 {
                     System.out.println();
                 }
             }else if (PilihanMenu ==3) {
-                System.out.println("Terima Kasih");
+                System.out.print("Terima Kasih");
             }
         }
     }
