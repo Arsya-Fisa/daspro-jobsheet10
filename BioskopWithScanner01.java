@@ -41,8 +41,11 @@ public class BioskopWithScanner01 {
                 }
                 sc.nextLine();
                 
-                if (baris >= 1 && baris <= 4 && kolom >= 1 && kolom <=4) {
+                if (penonton[baris-1] [kolom-1] != null) {
+                    System.out.println("---Kursi Sudah ditempati,harap pilih kursi lain---");
+                }else {
                     penonton[baris-1] [kolom-1] = nama;
+                   
                 }
                 
                 
@@ -62,7 +65,8 @@ public class BioskopWithScanner01 {
                     System.out.println();
                 }
             }else if (PilihanMenu ==3) {
-                System.out.print("Terima Kasih");
+                System.out.print("===Terima Kasih===");
+                break;
             }
         }
     }
