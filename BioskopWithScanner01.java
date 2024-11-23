@@ -7,20 +7,46 @@ public class BioskopWithScanner01 {
 
         String penonton[][] = new String [4][2];
         while (true) {
-            System.out.print("Masukan nama: ");
-            nama = sc.nextLine();
-            System.out.print("Masukan baris: ");
-            baris = sc.nextInt();
-            System.out.print("MAsukan kolom: ");
-            kolom = sc.nextInt();
+            System.out.println("Pilih Menu");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. Tampilkan Daftar penonton");
+            System.out.println("3. Exit");
+            System.out.println("Masukan Pilihan Menu");
+            int PilihanMenu = sc.nextInt();
             sc.nextLine();
 
-            penonton[baris-1] [kolom-1] = nama;
-            System.out.print("Input penonton lainya? (y/n): ");
-            next = sc.nextLine();
-
-            if (next.equalsIgnoreCase("n")) {
-                break;
+            if (PilihanMenu == 1) {
+                
+                System.out.print("Masukan nama: ");
+                nama = sc.nextLine();
+                System.out.print("Masukan baris: ");
+                baris = sc.nextInt();
+                System.out.print("MAsukan kolom: ");
+                kolom = sc.nextInt();
+                sc.nextLine();
+                
+                if (baris >= 1 && baris <= 4 && kolom >= 1 && kolom <=4) {
+                    penonton[baris-1] [kolom-1] = nama;
+                }
+                
+                
+    
+          
+            } else if (PilihanMenu == 2) {
+                System.out.println("Daftar Penonton");
+                for (int i = 0; i < penonton.length; i++) {
+                    for (int j = 0; j < penonton[i].length; j++) {
+                        if (penonton [i] [j] != null) {
+                            System.out.print(penonton[i] [j] + "   ");
+                        }else {
+                            System.out.print(" - ");
+                        }
+                       
+                    }
+                    System.out.println();
+                }
+            }else if (PilihanMenu ==3) {
+                System.out.println("Terima Kasih");
             }
         }
     }
